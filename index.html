@@ -9,6 +9,12 @@
 </head>
 <body>
 <h1>abcjs demo page</h1>
+<script type="text/javascript">
+	window.onload = function() {
+		abc_editor = new ABCJS.Editor("abc", { paper_id: "paper0", midi_id:"midi", warnings_id:"warnings" });
+	}
+</script>
+
 <p><b>abcjs</b> is an open source javascript rendering engine for interpreting abc formatted tunes.
 	It will render sheet music entirely in your browser.
 	It was written in 2009-2011 by Gregory Dyke and Paul Rosen.
@@ -19,15 +25,29 @@
 
 <p>For more information, see <a href="https://github.com/paulrosen/abcjs" >the project page</a>.</p>
 <textarea name="abc" id="abc" cols="80" rows="15">X: 1
-T: Cooley's
-M: 4/4
+X:1
+T: How Far I'll Go
 L: 1/8
-R: reel
-K: Emin
-|:D2|EB{c}BA B2 EB|~B2 AB dBAG|FDAD BDAD|FDAD dAFD|
-EBBA B2 EB|B2 AB defg|afe^c dBAF|DEFD E2:|
-|:gf|eB B2 efge|eB B2 gedB|A2 FA DAFA|A2 FA defg|
-eB B2 eBgB|eB B2 defg|afe^c dBAF|DEFD E2:|
+M:4/4
+K: F
+V:T clef=treble
+V:B clef=bass
+[V:T]|FG|A2FGA2FG|A4F2(c2|c2)(G6|G3)x1c2d2|
+w: See the line where the sky meets the sea It calls_ me._ no one
+[V:B]| x2 |x8 |x8 |x8 |x3 c'x4|
+w:And
+[V:T]|A6(G2|G3)x1c2d2|A6(G2|G4)z2FG|
+w: knows__ far it goes__ if the
+[V:B]|x8|x3c'x4|x8|x8|
+w:how
+[V:T]|A2FGA2FG|A2F2F2(c2|c2)(G6|G3)x1c2d2|
+w:wind in my sail on the sea stays be-hind_ me_ day I'll
+[V:B]|x8|x8|x8|x3c'x4|
+w:One
+[V:T]|A6(G2|G2)x4c2|(c8|c8)||
+w:know__ I'll go_
+[V:B]|x8|x2c'2c'2x2|x8|x8||
+w:how far
 </textarea>
 
 <hr />
@@ -40,10 +60,6 @@ eB B2 eBgB|eB B2 defg|afe^c dBAF|DEFD E2:|
 <div id="paper3"></div>
 
 
-<script type="text/javascript">
-	window.onload = function() {
-		abc_editor = new ABCJS.Editor("abc", { paper_id: "paper0", midi_id:"midi", warnings_id:"warnings" });
-	}
-</script>
+
 </body>
 </html>
